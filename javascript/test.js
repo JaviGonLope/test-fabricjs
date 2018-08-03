@@ -58,7 +58,29 @@ function initCanvas() {
         internal_border.bringToFront();
     })
 
+    canvas.on({
+        'selection:created': getSelection,
+        'selection:updated': getSelection
+    })
+
+    canvas.on('selection:cleared', function () {
+        $('#info').text('No se ha seleccionado ningún elemento.')
+    })
+
     canvas.renderAll();
+}
+
+function getSelection(){
+    var selected = canvas.getActiveObject();
+    if (selected) {
+        var type = selected.get('type');
+        if (type === 'activeSelection') {
+            $('#info').text('Type: multiple selection')
+        } else {
+            $('#info').text('Type: ' + type)
+        }
+
+    }
 }
 
 jQuery(document).ready(function () {
@@ -168,4 +190,22 @@ jQuery(document).ready(function () {
     jQuery("#bring-front-btn").click(function () {
 
     })
+
+    jQuery("#left-align-btn").click(function () {
+
+    })
+
+    jQuery("#right-align-btn").click(function () {
+
+    })
+
+    jQuery("#center-align-btn").click(function () {
+
+    })
+
+    jQuery("#get-info-btn").click(function () {
+
+    })
+
+    
 })
