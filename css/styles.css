@@ -1,0 +1,21 @@
+img {
+    border: 0 none;
+}
+
+input {
+    border: 1px solid #CCC;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 9px;
+    padding: 4px;
+}
+
+label {
+    color: #333;
+    margin-bottom: 5px;
+    max-width: 90%;
+}
+
+.hidden {
+    display: none !important;
+}
