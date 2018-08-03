@@ -19,3 +19,15 @@ label {
 .hidden {
     display: none !important;
 }
+
+#general-controls {
+    display: inline
+}
+
+#object-controls {
+    display: inline
+}
+
+#txt-controls {
+    display: inline
+}

@@ -10,47 +10,88 @@
 </head>
 
 <body>
+	<div id="general-controls">
+		<input type="file" id="select-file" accept="image/*" class="hidden">
+		<label id="uploadInputNoFilesSelected" for="select-file">
+			Insertar imagen
+		</label>
 
-	<input type="file" id="select-file" accept="image/*" class="hidden">
-	<label id="uploadInputNoFilesSelected" for="select-file">
-		Insertar imagen
-	</label>
+		<button id="add-text-btn">Insertar texto</button>
 
-	<button id="add-text-btn">Insertar texto</button>
+		<button id="json-export-btn">Exportar a JSON</button>
+	</div>
 
-	<button id="json-export-btn">Exportar a JSON</button>
 
-	<button id="bold-btn">B</button>
+	<div id="object-controls">
+		<button id="copy-btn">Copiar</button>
 
-	<button id="italic-btn">K</button>
+		<button id="paste-btn">Pegar</button>
 
-	<button id="underline-btn">S</button>
+		<button id="delete-btn">Borrar selección</button>
 
-	<button id="copy-btn">Copiar</button>
+		<button id="send-back-btn">Enviar atrás</button>
 
-	<button id="paste-btn">Pegar</button>
+		<button id="bring-front-btn">Traer al frente</button>
+	</div>
 
-	<button id="delete-btn">Borrar selección</button>
+	<div id="txt-controls" style="margin:2px">
+		<label>B
+			<input id="bold-btn" type="checkbox">
+		</label>
 
-	<button id="send-back-btn">Enviar atrás</button>
+		<label>K
+			<input id="italic-btn" type="checkbox">
+		</label>
 
-	<button id="bring-front-btn">Traer al frente</button>
+		<label>S
+			<input id="underline-btn" type="checkbox">
+		</label>
 
-	<select id="size-select">
-		<option value="12">12</option>
-		<option value="14">14</option>
-		<option value="16">16</option>
-		<option value="18">18</option>
-		<option value="20">20</option>
-	</select>
+		<select id="font-select">
+			<option value="arial">Arial</option>
+			<option value="helvetica" selected>Helvetica</option>
+			<option value="myriad pro">Myriad Pro</option>
+			<option value="delicious">Delicious</option>
+			<option value="verdana">Verdana</option>
+			<option value="georgia">Georgia</option>
+			<option value="courier">Courier</option>
+			<option value="comic sans ms">Comic Sans MS</option>
+			<option value="impact">Impact</option>
+			<option value="monaco">Monaco</option>
+			<option value="optima">Optima</option>
+			<option value="hoefler text">Hoefler Text</option>
+			<option value="plaster">Plaster</option>
+			<option value="engagement">Engagement</option>
+		</select>
 
-	<input type="color" name="" id="color-picker">
+		<select id="size-select">
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="14">14</option>
+			<option value="16">16</option>
+			<option value="18">18</option>
+			<option selected value="20">20</option>
+			<option value="22">22</option>
+			<option value="24">24</option>
+			<option value="26">26</option>
+			<option value="28">28</option>
+			<option value="30">30</option>
+			<option value="36">36</option>
+			<option value="48">48</option>
+			<option value="72">72</option>
+		</select>
 
-	<button id="left-align-btn">Alinear izquierda</button>
+		<input type="color" name="" id="color-picker">
 
-	<button id="right-align-btn">Alinear derecha</button>
+		<button id="left-align-btn">Alinear izquierda</button>
 
-	<button id="center-align-btn">Centrar</button>
+		<button id="center-align-btn">Centrar</button>
+
+		<button id="right-align-btn">Alinear derecha</button>
+	</div>
 
 	<canvas id="canvas"></canvas>
 	<div id="info" style="border:1px solid black;  width:1080">
